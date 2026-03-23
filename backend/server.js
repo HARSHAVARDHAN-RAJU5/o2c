@@ -25,6 +25,15 @@ app.get("/health", (req, res) => {
 app.use("/api/graph", graphRouter);
 app.use("/api/node", nodeRouter);
 
+const path = require("path");
+
+// Serve frontend build
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
+
 // ─── WEBSOCKET /ws/chat ───────────────────────────────────
 const wss = new WebSocket.Server({ server, path: "/ws/chat" });
 

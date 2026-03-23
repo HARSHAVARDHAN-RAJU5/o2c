@@ -1,7 +1,8 @@
 {
-  "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
-    "@xyflow/react": "^12.10.1",
-    "tailwindcss": "^4.2.2"
+  "name": "o2c-fullstack",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd .. && cd backend && npm install",
+    "start": "node backend/server.js"
   }
 }
