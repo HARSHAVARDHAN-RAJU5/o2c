@@ -10,8 +10,6 @@ __pycache__/
 # Data files (large, not needed in git)
 backend/data/
 backend/data.zip
-backend/graph_nodes.json
-backend/graph_edges.json
 backend/data.js
 
 # Build
