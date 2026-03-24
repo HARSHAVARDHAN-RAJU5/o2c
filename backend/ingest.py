@@ -13,10 +13,11 @@ DB_CONFIG = {
     "port":     int(os.getenv("DB_PORT", 5433)),
     "dbname":   os.getenv("DB_NAME", "sap_o2c"),
     "user":     os.getenv("DB_USER", "postgres"),
-    "password": os.getenv("DB_PASSWORD", "936158")
+    "password": os.getenv("DB_PASSWORD", ""),
+    "sslmode":  os.getenv("DB_SSL", "require")
 }
 
-ZIP_PATH = os.getenv("ZIP_PATH", "sap-order-to-cash-dataset.zip")
+ZIP_PATH = os.getenv("ZIP_PATH", os.path.join(os.path.dirname(__file__), "sap-order-to-cash-dataset.zip"))
 
 # ─── LOAD FROM ZIP ────────────────────────────────────────
 def load_all_from_zip():
