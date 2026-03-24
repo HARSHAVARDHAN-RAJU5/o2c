@@ -10,8 +10,6 @@ Most enterprise data lives in isolation — orders here, invoices there, payment
 
 **https://o2c.onrender.com/**
 
-> Replace with your actual deployed URL before submission.
-
 ---
 
 ## What It Does
