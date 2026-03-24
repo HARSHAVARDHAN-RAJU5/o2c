@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 const WS_URL =
   import.meta.env.VITE_WS_URL ||
-  `${window.location.protocol === "https:" ? "wss" : "ws"}://${window.location.hostname}:3001/ws/chat`;
+  `${window.location.protocol === "https:" ? "wss" : "ws"}://${window.location.host}/ws/chat`;
 
 // Suggested starter queries shown on load
 const STARTER_QUERIES = [

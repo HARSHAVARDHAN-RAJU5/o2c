@@ -10,10 +10,10 @@ load_dotenv()
 # ─── CONFIG ───────────────────────────────────────────────
 DB_CONFIG = {
     "host":     os.getenv("DB_HOST", "localhost"),
-    "port":     int(os.getenv("DB_PORT", 5432)),
+    "port":     int(os.getenv("DB_PORT", 5433)),
     "dbname":   os.getenv("DB_NAME", "sap_o2c"),
     "user":     os.getenv("DB_USER", "postgres"),
-    "password": os.getenv("DB_PASSWORD", "")
+    "password": os.getenv("DB_PASSWORD", "936158")
 }
 
 ZIP_PATH = os.getenv("ZIP_PATH", "sap-order-to-cash-dataset.zip")
