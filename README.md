@@ -8,7 +8,7 @@ Most enterprise data lives in isolation — orders here, invoices there, payment
 
 ## Live Demo
 
-**[https://o2c.onrender.com/]**
+**https://o2c.onrender.com/**
 
 > Replace with your actual deployed URL before submission.
 
@@ -328,6 +328,10 @@ npm start       # starts Node server serving the built frontend
 │       └── components/
 │           ├── GraphView.jsx  # ReactFlow graph with custom nodes
 │           └── ChatPanel.jsx  # WebSocket chat UI
+├── sessions/              # AI coding session logs (Claude Code)
+│   ├── chat.md
+│   ├── researchnddebug.md
+│   └── deploy.md
 └── package.json               # Root build + start scripts
 ```
 
