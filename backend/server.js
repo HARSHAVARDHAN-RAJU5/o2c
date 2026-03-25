@@ -106,4 +106,17 @@ const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`WebSocket running on ws://localhost:${PORT}/ws/chat`);
+
+  // ─── KEEP-ALIVE SELF-PING ──────────────────────────────
+  // Render free tier spins down after 15 min of inactivity.
+  // Pinging /health every 10 min prevents that.
+  const RENDER_URL = process.env.RENDER_EXTERNAL_URL;
+  if (RENDER_URL) {
+    console.log(`Keep-alive ping active → ${RENDER_URL}/health`);
+    setInterval(() => {
+      fetch(`${RENDER_URL}/health`)
+        .then(() => console.log("Keep-alive ping sent"))
+        .catch((err) => console.warn("Keep-alive ping failed:", err.message));
+    }, 10 * 60 * 1000); // every 10 minutes
+  }
 });
