@@ -422,6 +422,7 @@ function GraphViewInner({ onNodeSelect, highlightedIds = [], highlightType = "hi
     const connIds = new Set(neighbors.filter(nid => nodeMap[nid]));
     setConnectedNodeIds(connIds);
     setSelectedNodeId(nodeId);
+    highlightedSetRef.current = new Set(); 
 
     rebuildCanvas(newVisible, nodeId, connIds, highlightedSetRef.current, highlightType);
     onNodeSelect && onNodeSelect(node);
